@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Planning_Desk</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    
+    
+  </head>
+
+  <body>
+     
+     <div class="containner_yourcard"> 
+      <button id="but_2" class="fa fa-gavel" onclick="mycardReveal()"> REVEAL </button> 
+      <button id="but_2" class="fa fa-refresh" onclick="reset()"> RESET </button> <br>
+       
+      <div class="card" id="card_0"> 0 </div>
+      <div class="card" id="card_1_2"> &#189 </div>
+      <div class="card" id="card_1"> 1 </div>
+      <div class="card" id="card_2"> 2 </div>
+      <div class="card" id="card_3"> 3 </div>
+      <div class="card" id="card_5"> 5 </div>
+      <div class="card" id="card_8"> 8 </div>
+      <div class="card" id="card_13"> 13 </div>
+      <div class="card" id="card_20"> 20 </div>
+      <div class="card" id="card_40"> 40 </div>
+      <div class="card" id="card_100"> 100 </div>
+      <div class="card" id="card_question"> ? </div>
+      <div class="card" id="card_coffee"> <i class="fa fa-coffee fa-lg"> </i></div>
+    </div>
+    <div id="containner_waiting"> 
+      <br> </div>
+   
+
+<script>
+  
+  var yourcard = "";
+  var card_0 = document.getElementById("card_0").innerHTML;
+  var card_1_2 = document.getElementById("card_1_2").innerHTML;
+  var card_1 = document.getElementById("card_1").innerHTML;
+  var card_2 = document.getElementById("card_2").innerHTML;
+  var card_3 = document.getElementById("card_3").innerHTML;
+  var card_5 = document.getElementById("card_5").innerHTML;
+  var card_8 = document.getElementById("card_8").innerHTML;
+  var card_13 = document.getElementById("card_13").innerHTML;
+  var card_20 = document.getElementById("card_20").innerHTML;
+  var card_40 = document.getElementById("card_40").innerHTML;
+  var card_100 = document.getElementById("card_100").innerHTML;
+  var card_question = document.getElementById("card_question").innerHTML;
+  var card_coffee = document.getElementById("card_coffee").innerHTML;
+  
+  
+  $(document).ready(function () {
+    $("#card_0").click(function () { check(); yourcard = card_0; mycardTowaiting(); $(this).addClass("selected"); })
+    $("#card_1_2").click(function () { check(); yourcard = card_1_2; mycardTowaiting(); $(this).addClass("selected"); })
+    $("#card_1").click(function () { check(); yourcard = card_1; mycardTowaiting(); $(this).addClass("selected"); })
+    $("#card_2").click(function () { check(); yourcard = card_2; mycardTowaiting(); $(this).addClass("selected"); })
+    $("#card_3").click(function () { check(); yourcard = card_3; mycardTowaiting(); $(this).addClass("selected"); })
+    $("#card_5").click(function () { check(); yourcard = card_5; mycardTowaiting(); $(this).addClass("selected"); })
+    $("#card_8").click(function () { check(); yourcard = card_8; mycardTowaiting(); $(this).addClass("selected"); })
+    $("#card_13").click(function () { check(); yourcard = card_13; mycardTowaiting(); $(this).addClass("selected"); })
+    $("#card_20").click(function () { check(); yourcard = card_20; mycardTowaiting(); $(this).addClass("selected"); })
+    $("#card_40").click(function () { check(); yourcard = card_40; mycardTowaiting(); $(this).addClass("selected"); })
+    $("#card_100").click(function () { check(); yourcard = card_100; mycardTowaiting(); $(this).addClass("selected"); })
+    $("#card_question").click(function () { check(); yourcard = card_question; mycardTowaiting(); $(this).addClass("selected"); })
+    $("#card_coffee").click(function () { check(); yourcard = card_coffee; mycardTowaiting(); $(this).addClass("selected"); })
+  })
+
+  function check(){
+    var x = $('div').hasClass('waiting');
+    if ( x == true ){ 
+        reset();
+    } 
+  }
+  
+  function mycardTowaiting() {
+    $("#containner_waiting").append("<div class='waiting'> waiting </div>");
+  }
+
+  function mycardReveal() {
+    $("div.waiting").html(yourcard);
+    $("div.waiting").addClass("reveal");
+  }
+  
+  function reset(){
+    $("div.waiting").remove();
+    $("div.reveal").remove();
+    $("div").removeClass("selected");
+  }
+  
+</script>
+    
+  </body>
+</html>

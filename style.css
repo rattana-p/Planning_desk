@@ -1,0 +1,88 @@
+@media (min-width: 320px) {
+  .card, .waiting, .reveal {
+    width: calc(100%/5.5) !important;
+    height: 100px !important;
+    padding-top: 35px !important; } }
+@media (min-width: 480px) {
+  .card, .waiting, .reveal {
+    width: calc(100%/8.5) !important; } }
+@media (min-width: 600px) {
+  /* portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */ }
+@media (min-width: 801px) {
+  .card, .waiting, .reveal {
+    width: calc(100%/14) !important;
+    height: 140px !important;
+    padding-top: 55px !important; } }
+@media (min-width: 1281px) {
+  /* hi-res laptops and desktops */ }
+/* @media screen and (max-width:480px)
+  and (max-device-width:480px){
+  .card, .waiting, .reveal {
+    width: calc(100%/8) !important;
+  }
+} */
+* {
+  box-sizing: border-box; }
+
+body {
+  background-color: #e5e7e8; }
+
+.containner_yourcard,
+#containner_waiting {
+  display: block;
+  width: 90%;
+  margin: 10px auto;
+  justify-content: center; }
+
+.selected {
+  background-color: #38a1b1 !important;
+  border: 1px solid black !important; }
+
+.card {
+  justify-content: center;
+  text-align: center;
+  background-color: rgba(85, 85, 85, 0.5);
+  font-size: 18px;
+  color: white;
+  display: inline-flex;
+  width: calc(100%/14);
+  margin-top: 20px;
+  padding-top: 50px;
+  border-radius: 15px;
+  border: 1px solid white; }
+
+.waiting, .reveal {
+  justify-content: center;
+  height: 250px !important;
+  text-align: center;
+  background-color: #555555;
+  font-size: 25px;
+  color: white;
+  display: inline-flex;
+  width: 150px !important;
+  margin-left: auto;
+  padding-top: 100px !important;
+  border-radius: 15px; }
+
+.waiting {
+  background-color: #555555; }
+
+.reveal {
+  background-color: #38a1b1 !important;
+  box-shadow: 0px 0px 4px #555555;
+  border: 3px solid white !important;
+  width: 150px !important;
+  font-size: 40px; }
+
+button {
+  border: 0px;
+  padding: 8px;
+  background-color: transparent; }
+
+button:hover {
+  color: deepskyblue; }
+
+button:focus {
+  box-shadow: 0px; }
+
+/*# sourceMappingURL=style.css.map */
