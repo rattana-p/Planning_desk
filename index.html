@@ -53,19 +53,19 @@
   
   
   $(document).ready(function () {
-    $("#card_0").click(function () { check(); yourcard = card_0; mycardTowaiting(); $(this).addClass("selected"); })
-    $("#card_1_2").click(function () { check(); yourcard = card_1_2; mycardTowaiting(); $(this).addClass("selected"); })
-    $("#card_1").click(function () { check(); yourcard = card_1; mycardTowaiting(); $(this).addClass("selected"); })
-    $("#card_2").click(function () { check(); yourcard = card_2; mycardTowaiting(); $(this).addClass("selected"); })
-    $("#card_3").click(function () { check(); yourcard = card_3; mycardTowaiting(); $(this).addClass("selected"); })
-    $("#card_5").click(function () { check(); yourcard = card_5; mycardTowaiting(); $(this).addClass("selected"); })
-    $("#card_8").click(function () { check(); yourcard = card_8; mycardTowaiting(); $(this).addClass("selected"); })
-    $("#card_13").click(function () { check(); yourcard = card_13; mycardTowaiting(); $(this).addClass("selected"); })
-    $("#card_20").click(function () { check(); yourcard = card_20; mycardTowaiting(); $(this).addClass("selected"); })
-    $("#card_40").click(function () { check(); yourcard = card_40; mycardTowaiting(); $(this).addClass("selected"); })
-    $("#card_100").click(function () { check(); yourcard = card_100; mycardTowaiting(); $(this).addClass("selected"); })
-    $("#card_question").click(function () { check(); yourcard = card_question; mycardTowaiting(); $(this).addClass("selected"); })
-    $("#card_coffee").click(function () { check(); yourcard = card_coffee; mycardTowaiting(); $(this).addClass("selected"); })
+    $("#card_0").click(function () { check(); yourcard = card_0; $(this).addClass("selected"); })
+    $("#card_1_2").click(function () { check(); yourcard = card_1_2; $(this).addClass("selected"); })
+    $("#card_1").click(function () { check(); yourcard = card_1; $(this).addClass("selected"); })
+    $("#card_2").click(function () { check(); yourcard = card_2; $(this).addClass("selected"); })
+    $("#card_3").click(function () { check(); yourcard = card_3; $(this).addClass("selected"); })
+    $("#card_5").click(function () { check(); yourcard = card_5; $(this).addClass("selected"); })
+    $("#card_8").click(function () { check(); yourcard = card_8; $(this).addClass("selected"); })
+    $("#card_13").click(function () { check(); yourcard = card_13; $(this).addClass("selected"); })
+    $("#card_20").click(function () { check(); yourcard = card_20; $(this).addClass("selected"); })
+    $("#card_40").click(function () { check(); yourcard = card_40; $(this).addClass("selected"); })
+    $("#card_100").click(function () { check(); yourcard = card_100; $(this).addClass("selected"); })
+    $("#card_question").click(function () { check(); yourcard = card_question; $(this).addClass("selected"); })
+    $("#card_coffee").click(function () { check(); yourcard = card_coffee; $(this).addClass("selected"); })
   })
 
   function check(){
@@ -73,6 +73,7 @@
     if ( x == true ){ 
         reset();
     } 
+    mycardTowaiting()
   }
   
   function mycardTowaiting() {
